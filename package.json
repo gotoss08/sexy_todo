@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "my_todo",
-  "version": "0.0.0",
+  "name": "sexy_todo",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider preact build",
