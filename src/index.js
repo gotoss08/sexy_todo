@@ -1,24 +1,6 @@
 import './style';
 import { useState, useEffect } from 'preact/hooks';
 
-// function onKeyPress(e) {
-
-// 	if (document.activeElement != document.body) return;
-
-// 	console.log('on key press');
-// 	console.dir(e);
-
-// 	if (e.key == 'a') {
-// 		console.log('move left');
-// 	}
-
-// 	if (e.key == 'd') {
-// 		console.log('move right');
-// 	}
-// }
-
-const maxPages = 10000;
-
 function computeCurrentPageClass(cursor, page_index) {
 	if (cursor == page_index) return 'center-page';
 	if (cursor - 1 == page_index) return 'left-page';
@@ -30,11 +12,9 @@ function computeCurrentPageClass(cursor, page_index) {
 
 export default function App() {
 
-	const pages = [0, 1, 2, 4, 5];
+	const pages = [0, 1, 2, 4, 5]; // temp
 
 	const [cursor, setCursor] = useState(0);
-	const [count, setCount] = useState(-1);
-	const [mainClass, setMainClass] = useState('default-main');
 
 	const onKeyPress = (e) => {
 		if (e.key == 'a') {
@@ -54,11 +34,10 @@ export default function App() {
 	return (
 		<div>
 			{pages.map((page, page_index) =>
-			        <div className={'page ' + computeCurrentPageClass(cursor, page_index)}>
-			        	<input/>
-			        	<h1>page {page}</h1>
-			        </div>)
-			}
+				<div className={'page ' + computeCurrentPageClass(cursor, page_index)}>
+					<input/>
+					<h1>page {page}</h1>
+				</div>)}
 		</div>
 	);
 }

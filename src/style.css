@@ -1,7 +1,7 @@
 html, body {
 	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
 	font-weight: 400;
-	max-width: 600px;
+	max-width: 640px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: hidden;
@@ -11,25 +11,11 @@ h1 {
 	text-align: center;
 }
 
-.default-main {
-	background-color: red;
-	position: relative;
-	left: 0;
-}
-
-.new-main {
-	background-color: green;
-	left: -150%;
-}
-
 .page {
-/*	float: left;*/
-/*	display: inline-block;*/
 	position: absolute;
-/*	position: relative;*/
-	transition: left 0.5s ease;
 	left: 100%;
 	transform: translate(-50%, 0);
+	transition: left 0.5s ease;
 }
 
 .left-page {
